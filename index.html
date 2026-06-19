@@ -1,683 +1,656 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Macellerie Bergamaschi | Cornaredo — Tradizione della carne dal 1960</title>
-<meta name="description" content="Macelleria artigianale a Cornaredo (MI). Carni tracciate, km 0, tagli su ordinazione. Dal 1960 tre generazioni di famiglia al servizio della qualita.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#0a0806;color:#e8ddd0;font-family:'DM Sans',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
-.pd{font-family:'Playfair Display',Georgia,serif}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macellerie Bergamaschi | Cornaredo (MI) — Dal 1980</title>
+  <meta name="description" content="Macelleria artigianale a Cornaredo (MI). Carni selezionate, polleria, gastronomia. Dal 1980 tre generazioni di passione. Via Magenta 37.">
+  <meta name="theme-color" content="#111111">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥩</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── TOKENS ─────────────────────────────────────────────────── */
+    :root {
+      --bg:        #111111;
+      --surface:   #191919;
+      --surface2:  #222222;
+      --border:    rgba(255,255,255,.07);
+      --red:       #C41E0E;
+      --red-light: #E32B1E;
+      --gold:      #C49A4A;
+      --gold-dim:  rgba(196,154,74,.15);
+      --text:      #F2EDE5;
+      --muted:     #8A8078;
+      --muted2:    #5A5450;
+      --radius:    12px;
+      --nav-h:     64px;
+    }
 
-/* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:50;
-  border-bottom:1px solid rgba(212,168,83,.14);
-  background:rgba(10,8,6,.95);backdrop-filter:blur(20px);
-  padding:.9rem 3rem;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.nav-brand{
-  display:flex;align-items:center;gap:.75rem;
-  text-decoration:none;
-}
-.nav-brand-name{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:600;color:#e8ddd0;letter-spacing:.03em}
-.nav-brand-sub{font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(212,168,83,.6)}
-.nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{font-size:.75rem;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:rgba(232,221,208,.45);text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:#e8ddd0}
-.nav-cta{
-  background:transparent;color:#d4a853;font-size:.72rem;font-weight:600;letter-spacing:.1em;
-  text-transform:uppercase;padding:.5rem 1.4rem;text-decoration:none;border-radius:2px;
-  border:1px solid rgba(212,168,83,.4);transition:all .2s;
-}
-.nav-cta:hover{background:rgba(212,168,83,.1);border-color:#d4a853}
+    /* ── RESET ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
 
-/* HERO */
-#hero{
-  padding-top:4.5rem;
-  min-height:100vh;
-  display:grid;grid-template-columns:1fr 1fr;
-}
-.hero-left{
-  padding:7rem 4.5rem;
-  display:flex;flex-direction:column;justify-content:center;
-  border-right:1px solid rgba(212,168,83,.1);
-}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:.5rem;
-  font-size:.6rem;font-weight:500;letter-spacing:.25em;text-transform:uppercase;
-  color:rgba(212,168,83,.55);margin-bottom:2rem;
-}
-.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:rgba(212,168,83,.4)}
-.hero-left h1{
-  font-family:'Playfair Display',serif;
-  font-size:4.2rem;font-weight:700;line-height:1.05;
-  color:#e8ddd0;margin-bottom:1.4rem;
-  letter-spacing:-.01em;
-}
-.hero-left h1 em{font-style:italic;font-weight:400;color:#d4a853}
-.hero-left p{
-  color:rgba(232,221,208,.52);font-size:.95rem;line-height:1.85;
-  max-width:40ch;margin-bottom:2.8rem;
-}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{
-  background:#d4a853;color:#0a0806;
-  font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  padding:.9rem 2.2rem;text-decoration:none;border-radius:2px;transition:all .25s;
-}
-.btn-primary:hover{background:#b8903f}
-.btn-outline{
-  border:1px solid rgba(212,168,83,.35);color:rgba(212,168,83,.7);
-  font-size:.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
-  padding:.9rem 2.2rem;text-decoration:none;border-radius:2px;transition:all .25s;
-}
-.btn-outline:hover{border-color:#d4a853;color:#d4a853}
+    /* ── NAV ────────────────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem;
+      background: rgba(17,17,17,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: .75rem;
+    }
+    .nav-brand img {
+      height: 38px; width: auto; object-fit: contain;
+    }
+    .nav-brand-text { line-height: 1.2; }
+    .nav-brand-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: .95rem; font-weight: 600;
+      letter-spacing: .02em;
+    }
+    .nav-brand-sub {
+      font-size: .68rem; color: var(--muted); letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex; gap: 1.75rem; list-style: none;
+    }
+    .nav-links a {
+      font-size: .82rem; font-weight: 400; color: var(--muted);
+      letter-spacing: .04em; text-transform: uppercase;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      display: flex; align-items: center; gap: .45rem;
+      background: #25D366; color: #000;
+      padding: .45rem 1rem; border-radius: 6px;
+      font-size: .8rem; font-weight: 600; letter-spacing: .02em;
+      transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .88; }
 
-.hero-right{
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(circle at 35% 45%,rgba(100,60,10,.7),transparent 55%),
-    radial-gradient(circle at 75% 75%,rgba(30,20,5,.8),transparent 45%),
-    linear-gradient(155deg,rgba(5,3,1,.72) 0%,rgba(12,8,3,.55) 40%,rgba(5,3,1,.78) 100%),
-    url('https://images.unsplash.com/photo-1602800222029-50de6cdb5d77?w=1200&q=80&fit=crop&auto=format') center/cover no-repeat;
-}
-.hero-right::before{
-  content:'';position:absolute;inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
-}
-.hero-right::after{
-  content:'1960';
-  font-family:'Playfair Display',serif;
-  font-size:12rem;font-weight:700;
-  color:rgba(212,168,83,.04);
-  position:absolute;bottom:-2rem;right:-1rem;line-height:1;
-}
-.hero-badge{
-  position:absolute;top:4rem;right:3.5rem;z-index:10;
-  width:90px;height:90px;border-radius:50%;
-  background:rgba(212,168,83,.07);
-  border:1px solid rgba(212,168,83,.22);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;
-}
-.hero-badge .badge-year{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;color:rgba(212,168,83,.75);line-height:1}
-.hero-badge .badge-label{font-size:.5rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(212,168,83,.4);margin-top:.2rem}
+    /* ── HERO ───────────────────────────────────────────────────── */
+    #hero {
+      min-height: 100svh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding-top: var(--nav-h);
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 3rem 5rem 4rem;
+    }
+    .hero-eyebrow {
+      font-size: .72rem; font-weight: 500; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 700; line-height: 1.12;
+      color: var(--text); margin-bottom: 1.5rem;
+    }
+    .hero-title em { color: var(--red-light); font-style: italic; }
+    .hero-body {
+      font-size: 1.05rem; color: var(--muted); max-width: 28rem;
+      margin-bottom: 2.5rem; line-height: 1.75;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #25D366; color: #000;
+      padding: .75rem 1.5rem; border-radius: 8px;
+      font-weight: 600; font-size: .92rem;
+      transition: opacity .2s;
+    }
+    .btn-primary:hover { opacity: .88; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: .5rem;
+      border: 1px solid var(--border); color: var(--text);
+      padding: .75rem 1.5rem; border-radius: 8px;
+      font-weight: 400; font-size: .92rem;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.04); }
+    .hero-right {
+      position: relative; overflow: hidden;
+    }
+    .hero-right img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(.75) saturate(.9);
+    }
+    .hero-badge {
+      position: absolute; bottom: 2rem; left: 2rem;
+      background: rgba(17,17,17,.85); backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      padding: .6rem 1rem; border-radius: 8px;
+      font-size: .78rem; color: var(--muted); letter-spacing: .04em;
+    }
 
-/* STATS strip */
-.stats-strip{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  border-top:1px solid rgba(212,168,83,.1);
-  background:#080604;
-}
-.stat-cell{
-  padding:2.5rem 2rem;
-  border-right:1px solid rgba(212,168,83,.1);
-  text-align:center;
-}
-.stat-cell:last-child{border-right:none}
-.stat-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:600;color:#d4a853;line-height:1;margin-bottom:.3rem}
-.stat-label{font-size:.65rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,221,208,.3)}
+    /* ── SECTIONS COMMON ────────────────────────────────────────── */
+    section { padding: 5rem 4rem; }
+    .section-label {
+      font-size: .68rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 700; line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .section-subtitle {
+      font-size: 1rem; color: var(--muted);
+      max-width: 40rem; line-height: 1.7;
+    }
+    .section-header { margin-bottom: 3rem; }
 
-/* PRODUCTS section */
-#prodotti{padding:7rem 4.5rem;border-top:1px solid rgba(212,168,83,.08);background:#0a0806}
-.section-overline{font-size:.6rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(212,168,83,.5);margin-bottom:.6rem}
-.section-title{font-family:'Playfair Display',serif;font-size:3rem;font-weight:400;font-style:italic;line-height:1.1;margin-bottom:3.5rem;color:#e8ddd0}
-.products-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid rgba(212,168,83,.1)}
-.product-category{padding:3rem;background:#0d0b08}
-.product-category:first-child{border-right:1px solid rgba(212,168,83,.1)}
-.cat-header{
-  font-size:.6rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(212,168,83,.5);margin-bottom:2rem;padding-bottom:.8rem;
-  border-bottom:1px solid rgba(212,168,83,.1);
-}
-.product-item{
-  display:flex;justify-content:space-between;align-items:baseline;
-  padding:.85rem 0;border-bottom:1px solid rgba(212,168,83,.07);gap:1rem;
-}
-.product-item:last-child{border-bottom:none}
-.product-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:400;color:#e8ddd0;margin-bottom:.2rem}
-.product-desc{font-size:.73rem;color:rgba(232,221,208,.38);line-height:1.4}
-.product-price{
-  font-family:'Playfair Display',serif;font-size:.95rem;font-weight:600;
-  color:#d4a853;white-space:nowrap;
-}
-.product-unit{font-size:.68rem;color:rgba(212,168,83,.4)}
+    /* ── PRODOTTI ───────────────────────────────────────────────── */
+    #prodotti { background: var(--surface); }
+    .prodotti-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px;
+      border: 1.5px solid var(--border); border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .prodotto-card {
+      background: var(--surface2);
+      padding: 2.5rem 2rem;
+      transition: background .25s;
+    }
+    .prodotto-card:hover { background: #282828; }
+    .prodotto-icon { font-size: 2.2rem; margin-bottom: 1.25rem; }
+    .prodotto-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem; font-weight: 600;
+      margin-bottom: .75rem;
+    }
+    .prodotto-body { font-size: .88rem; color: var(--muted); line-height: 1.7; }
+    .prodotto-list {
+      margin-top: 1rem; padding-left: 0; list-style: none;
+      display: flex; flex-direction: column; gap: .35rem;
+    }
+    .prodotto-list li {
+      font-size: .82rem; color: var(--muted2);
+      padding-left: 1rem; position: relative;
+    }
+    .prodotto-list li::before {
+      content: '—'; position: absolute; left: 0;
+      color: var(--red); font-size: .7rem;
+    }
 
-/* STORIA section */
-#storia{
-  display:grid;grid-template-columns:1fr 1fr;
-  border-top:1px solid rgba(212,168,83,.08);
-}
-.storia-visual{
-  position:relative;overflow:hidden;min-height:550px;
-  background:
-    radial-gradient(circle at 40% 35%,rgba(80,45,5,.6),transparent 55%),
-    radial-gradient(ellipse at 80% 80%,rgba(20,12,2,.8),transparent 45%),
-    linear-gradient(155deg,rgba(5,3,1,.68) 0%,rgba(10,6,2,.58) 60%,rgba(5,3,1,.78) 100%),
-    url('https://images.unsplash.com/photo-1557886946-117ae7292032?w=900&q=80&fit=crop&auto=format') center/cover no-repeat;
-}
-.storia-visual::before{
-  content:'';position:absolute;inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
-}
-.storia-visual-caption{
-  position:absolute;bottom:2.5rem;left:2.5rem;z-index:10;
-  font-family:'Playfair Display',serif;font-style:italic;
-  font-size:.9rem;color:rgba(212,168,83,.3);
-}
-.storia-text{
-  padding:7rem 4.5rem;
-  display:flex;flex-direction:column;justify-content:center;
-  background:#0d0b08;
-}
-.storia-text blockquote{
-  font-family:'Playfair Display',serif;
-  font-size:1.75rem;font-weight:400;font-style:italic;
-  line-height:1.4;color:#e8ddd0;
-  border-left:2px solid #d4a853;padding-left:2rem;
-  margin-bottom:2rem;
-}
-.storia-text p{font-size:.88rem;color:rgba(232,221,208,.5);line-height:1.9;margin-bottom:1rem}
-.storia-firma{
-  margin-top:1.5rem;display:flex;align-items:center;gap:1rem;
-}
-.storia-firma-line{height:1px;width:40px;background:rgba(212,168,83,.35)}
-.storia-firma-name{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(212,168,83,.55)}
+    /* ── STORIA ─────────────────────────────────────────────────── */
+    #storia {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+      align-items: center;
+    }
+    .storia-image { position: relative; border-radius: var(--radius); overflow: hidden; }
+    .storia-image img {
+      width: 100%; height: 520px; object-fit: cover;
+      filter: brightness(.85) saturate(.85);
+    }
+    .storia-image-badge {
+      position: absolute; bottom: 1.5rem; right: 1.5rem;
+      background: var(--red); color: #fff;
+      padding: .5rem 1rem; border-radius: 6px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1rem; font-weight: 700;
+    }
+    .storia-content { padding: 1rem 0; }
+    .storia-content p {
+      font-size: .95rem; color: var(--muted); line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .storia-valori {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+      margin-top: 2rem;
+    }
+    .valore-card {
+      background: var(--gold-dim);
+      border: 1px solid rgba(196,154,74,.2);
+      padding: 1.25rem; border-radius: var(--radius);
+    }
+    .valore-title {
+      font-size: .82rem; font-weight: 600; color: var(--gold);
+      margin-bottom: .35rem; letter-spacing: .03em;
+    }
+    .valore-body { font-size: .8rem; color: var(--muted); line-height: 1.6; }
 
-/* ORARI & INFO */
-#info{
-  background:#080604;color:#e8ddd0;
-  display:grid;grid-template-columns:1.5fr 1fr 1fr;
-  border-top:1px solid rgba(212,168,83,.08);
-}
-.info-col{
-  padding:4.5rem 3.5rem;
-  border-right:1px solid rgba(212,168,83,.1);
-}
-.info-col:last-child{border-right:none}
-.info-col-label{
-  font-size:.6rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
-  color:#d4a853;margin-bottom:1.5rem;
-}
-.info-col h3{
-  font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;
-  color:#e8ddd0;margin-bottom:1rem;line-height:1.25;
-}
-.info-col p,.info-col a{font-size:.83rem;color:rgba(232,221,208,.4);line-height:1.8;text-decoration:none}
-.info-col a:hover{color:#e8ddd0}
-.orario-row{display:flex;justify-content:space-between;align-items:baseline;padding:.4rem 0;border-bottom:1px solid rgba(212,168,83,.08)}
-.orario-row:last-child{border-bottom:none}
-.orario-day{font-size:.76rem;font-weight:500;color:rgba(232,221,208,.6)}
-.orario-time{font-size:.76rem;color:rgba(232,221,208,.38)}
-.orario-closed{color:rgba(232,221,208,.2);font-style:italic}
+    /* ── RECENSIONI ─────────────────────────────────────────────── */
+    #recensioni { background: var(--surface); }
+    .recensioni-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .recensione-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 1.75rem; border-radius: var(--radius);
+    }
+    .recensione-stars { color: #F5A623; font-size: 1rem; margin-bottom: .75rem; letter-spacing: .05em; }
+    .recensione-text {
+      font-size: .88rem; color: var(--muted); line-height: 1.7;
+      font-style: italic; margin-bottom: 1rem;
+    }
+    .recensione-author { font-size: .78rem; color: var(--muted2); font-weight: 500; }
+    .recensioni-cta {
+      margin-top: 2.5rem; display: flex; align-items: center; gap: 1.5rem;
+    }
+    .btn-google {
+      display: inline-flex; align-items: center; gap: .5rem;
+      border: 1px solid var(--border); color: var(--text);
+      padding: .6rem 1.25rem; border-radius: 8px;
+      font-size: .85rem; font-weight: 500;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-google:hover { border-color: rgba(255,255,255,.25); background: rgba(255,255,255,.04); }
+    .rating-badge {
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .rating-score {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2rem; font-weight: 700; color: var(--text);
+    }
+    .rating-info { line-height: 1.3; }
+    .rating-stars { color: #F5A623; font-size: .9rem; }
+    .rating-count { font-size: .72rem; color: var(--muted); }
 
-/* WA CTA */
-#contatti{
-  padding:7rem 4.5rem;
-  border-top:1px solid rgba(212,168,83,.08);
-  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
-  background:#0d0b08;
-}
-.contatti-left h2{
-  font-family:'Playfair Display',serif;
-  font-size:2.8rem;font-weight:400;font-style:italic;
-  line-height:1.15;color:#e8ddd0;margin-bottom:1rem;
-}
-.contatti-left p{font-size:.88rem;color:rgba(232,221,208,.48);line-height:1.85;margin-bottom:2rem}
-.btn-wa{
-  display:inline-flex;align-items:center;gap:.75rem;
-  background:#25d366;color:#fff;
-  font-size:.8rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
-  padding:.9rem 2.2rem;border-radius:2px;text-decoration:none;
-  transition:background .25s;
-}
-.btn-wa:hover{background:#1da855}
-.map-placeholder{
-  background:
-    repeating-linear-gradient(0deg,rgba(212,168,83,.04) 0px,rgba(212,168,83,.04) 1px,transparent 1px,transparent 28px),
-    repeating-linear-gradient(90deg,rgba(212,168,83,.04) 0px,rgba(212,168,83,.04) 1px,transparent 1px,transparent 28px),
-    linear-gradient(155deg,#0f0c08 0%,#0d0a07 60%,#0a0806 100%);
-  border-radius:4px;
-  height:280px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  border:1px solid rgba(212,168,83,.12);
-  position:relative;overflow:hidden;
-  gap:.6rem;
-}
-.map-placeholder a{
-  text-decoration:none;
-}
-.map-placeholder::before{
-  content:'';
-  position:absolute;
-  top:calc(50% - 18px);left:50%;
-  width:20px;height:20px;background:#d4a853;border-radius:50% 50% 50% 0;
-  transform:translate(-50%,-50%) rotate(-45deg);
-  box-shadow:0 0 0 5px rgba(212,168,83,.15),0 4px 14px rgba(0,0,0,.4);
-}
-.map-placeholder::after{
-  content:'';position:absolute;
-  top:calc(50% - 10px);left:50%;transform:translateX(-50%);
-  width:60px;height:60px;border-radius:50%;
-  border:1px dashed rgba(212,168,83,.18);
-}
-.map-label{
-  margin-top:2rem;
-  font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
-  color:rgba(212,168,83,.4);
-}
+    /* ── ORARI & CONTATTI ───────────────────────────────────────── */
+    #info {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+      background: var(--surface);
+    }
+    .orari-table { border-collapse: collapse; width: 100%; margin-top: 1.5rem; }
+    .orari-table tr { border-bottom: 1px solid var(--border); }
+    .orari-table tr:last-child { border-bottom: none; }
+    .orari-table td { padding: .65rem 0; font-size: .9rem; }
+    .orari-table td:first-child { color: var(--muted); width: 45%; }
+    .orari-table td:last-child { color: var(--text); }
+    .orari-closed td { color: var(--muted2) !important; }
+    .orari-note {
+      margin-top: 1rem; font-size: .78rem; color: var(--muted2);
+      font-style: italic; line-height: 1.6;
+    }
+    .contatti-list { list-style: none; display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem; }
+    .contatto-item { display: flex; align-items: flex-start; gap: 1rem; }
+    .contatto-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--gold-dim); border: 1px solid rgba(196,154,74,.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0; margin-top: .1rem;
+    }
+    .contatto-label { font-size: .7rem; color: var(--gold); letter-spacing: .08em; text-transform: uppercase; margin-bottom: .2rem; }
+    .contatto-value { font-size: .92rem; color: var(--text); }
+    .contatto-value a { color: var(--text); transition: color .2s; }
+    .contatto-value a:hover { color: var(--gold); }
 
-/* FOOTER */
-footer{
-  padding:2rem 3.5rem;
-  border-top:1px solid rgba(212,168,83,.1);
-  background:#080604;
-  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
-}
-.footer-brand{font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:rgba(212,168,83,.5)}
-.footer-note{font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(232,221,208,.2)}
-.footer-by{font-size:.66rem;color:rgba(232,221,208,.2);letter-spacing:.04em}
-.footer-by a{color:#d4a853;text-decoration:none;font-weight:600}
+    /* ── MAPPA ──────────────────────────────────────────────────── */
+    #contatti { padding: 0; }
+    #contatti iframe {
+      width: 100%; height: 400px; display: block; border: 0;
+      filter: grayscale(.3) brightness(.85);
+    }
+    .wa-cta-bar {
+      background: var(--surface2);
+      border-top: 1px solid var(--border);
+      padding: 3rem 4rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .wa-cta-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem; font-weight: 600;
+    }
+    .wa-cta-sub { font-size: .88rem; color: var(--muted); margin-top: .25rem; }
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: #25D366; color: #000;
+      padding: .9rem 2rem; border-radius: 8px;
+      font-weight: 700; font-size: 1rem;
+      transition: opacity .2s; white-space: nowrap;
+    }
+    .btn-wa:hover { opacity: .88; }
 
-/* SERVIZI mini strip */
-#servizi{
-  border-top:1px solid rgba(212,168,83,.08);
-  background:#080604;
-  display:grid;grid-template-columns:repeat(4,1fr);
-}
-.servizio-cell{
-  padding:3rem 2.5rem;
-  border-right:1px solid rgba(212,168,83,.1);
-  text-align:center;
-}
-.servizio-cell:last-child{border-right:none}
-.servizio-icon{
-  width:48px;height:48px;
-  background:rgba(212,168,83,.07);
-  border:1px solid rgba(212,168,83,.18);
-  border-radius:50%;
-  margin:0 auto 1.2rem;
-  display:flex;align-items:center;justify-content:center;
-}
-.servizio-icon svg{width:22px;height:22px;stroke:#d4a853;fill:none;stroke-width:1.5}
-.servizio-name{font-family:'Playfair Display',serif;font-size:1rem;color:#e8ddd0;margin-bottom:.4rem}
-.servizio-desc{font-size:.72rem;color:rgba(232,221,208,.35);line-height:1.5}
+    /* ── FOOTER ─────────────────────────────────────────────────── */
+    footer {
+      background: #0D0D0D;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: .95rem;
+    }
+    .footer-social { display: flex; gap: 1rem; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 8px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: .85rem; font-weight: 600;
+      transition: border-color .2s, color .2s;
+    }
+    .footer-social a:hover { border-color: rgba(255,255,255,.25); color: var(--text); }
+    .footer-note { font-size: .78rem; color: var(--muted2); }
+    .footer-by { font-size: .72rem; color: var(--muted2); }
+    .footer-by a { color: var(--gold); }
 
-@media(max-width:900px){
-  nav{padding:.9rem 1.5rem}
-  .nav-links{display:none}
-  #hero{grid-template-columns:1fr}
-  .hero-left{padding:6rem 1.5rem 3rem}
-  .hero-left h1{font-size:2.8rem}
-  .hero-right{min-height:260px}
-  .hero-right::after{font-size:6rem}
-  .stats-strip{grid-template-columns:repeat(2,1fr)}
-  .stat-cell:nth-child(2){border-right:none}
-  .stat-cell:nth-child(3){border-right:1px solid rgba(212,168,83,.1)}
-  #prodotti{padding:4rem 1.5rem}
-  .products-grid{grid-template-columns:1fr}
-  .product-category:first-child{border-right:none;border-bottom:1px solid rgba(212,168,83,.1)}
-  #storia{grid-template-columns:1fr}
-  .storia-visual{min-height:280px}
-  .storia-text{padding:4rem 1.5rem}
-  #info{grid-template-columns:1fr}
-  .info-col{border-right:none;border-bottom:1px solid rgba(212,168,83,.1);padding:3rem 1.5rem}
-  #contatti{grid-template-columns:1fr;padding:4rem 1.5rem;gap:3rem}
-  #servizi{grid-template-columns:1fr 1fr}
-  .servizio-cell:nth-child(2){border-right:none}
-  footer{padding:1.5rem;flex-direction:column;text-align:center}
-}
-</style>
+    /* ── RESPONSIVE ─────────────────────────────────────────────── */
+    @media (max-width: 960px) {
+      #hero { grid-template-columns: 1fr; }
+      .hero-right { height: 45vw; min-height: 280px; }
+      .hero-left { padding: 3rem 2rem; }
+      section { padding: 4rem 2rem; }
+      #storia { grid-template-columns: 1fr; gap: 2.5rem; }
+      #info { grid-template-columns: 1fr; gap: 3rem; }
+      .prodotti-grid { grid-template-columns: 1fr; }
+      .recensioni-grid { grid-template-columns: 1fr; }
+      .storia-valori { grid-template-columns: 1fr; }
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .wa-cta-bar { padding: 2.5rem 2rem; }
+      footer { padding: 2rem; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV con logo SVG inline -->
+<!-- NAV -->
 <nav aria-label="Navigazione principale">
   <a href="#hero" class="nav-brand" aria-label="Macellerie Bergamaschi">
-    <img src="assets/images/logo.jpg" alt="F.lli Bergamaschi logo" height="42" style="object-fit:contain;display:block">
-    <div>
+    <img src="assets/images/logo.jpg" alt="F.lli Bergamaschi logo">
+    <div class="nav-brand-text">
       <div class="nav-brand-name">Macellerie Bergamaschi</div>
-      <div class="nav-brand-sub">Dal 1960 &middot; Cornaredo</div>
+      <div class="nav-brand-sub">Dal 1980 &middot; Cornaredo</div>
     </div>
   </a>
-  <ul class="nav-links">
-    <li><a href="#prodotti">I nostri tagli</a></li>
+  <ul class="nav-links" role="list">
+    <li><a href="#prodotti">Prodotti</a></li>
     <li><a href="#storia">La storia</a></li>
-    <li><a href="#servizi">Servizi</a></li>
+    <li><a href="#recensioni">Recensioni</a></li>
     <li><a href="#info">Orari</a></li>
     <li><a href="#contatti">Dove siamo</a></li>
   </ul>
-  <a href="https://wa.me/393280782926" class="nav-cta" target="_blank" rel="noopener">Scrivi su WhatsApp</a>
+  <a href="https://wa.me/393280782926" class="nav-cta" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+    WhatsApp
+  </a>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
+<section id="hero" aria-label="Sezione principale">
   <div class="hero-left">
-    <p class="hero-eyebrow">Macelleria artigianale &middot; Cornaredo (MI) &middot; Est. 1960</p>
-    <h1>Carne vera.<br><em>Come una volta.</em><br>Sempre.</h1>
-    <p>Sessantacinque anni di mestiere. Tre generazioni, gli stessi fornitori locali, lo stesso rispetto per la materia prima e per chi la compra. Nessun compromesso sulla qualita.</p>
-    <div class="hero-ctas">
-      <a href="https://wa.me/393280782926" class="btn-primary" target="_blank" rel="noopener">Ordina ora su WhatsApp</a>
-      <a href="#prodotti" class="btn-outline">Vedi i tagli</a>
+    <p class="hero-eyebrow">Macelleria &middot; Polleria &middot; Gastronomia &middot; Cornaredo (MI)</p>
+    <h1 class="hero-title">
+      Tre generazioni<br>di <em>carne buona.</em>
+    </h1>
+    <p class="hero-body">
+      Dal 1980, selezioniamo carni italiane di prima qualità, le tagliamo con cura e le consigliamo con competenza. Non troverai etichette anonime: qui c&#39;è il banco, il coltello, e chi lo sa usare.
+    </p>
+    <div class="hero-actions">
+      <a href="https://wa.me/393280782926" class="btn-primary" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        Ordina su WhatsApp
+      </a>
+      <a href="#info" class="btn-outline">Orari e dove siamo</a>
     </div>
   </div>
   <div class="hero-right" role="img" aria-label="Banco della macelleria Bergamaschi">
-    <div class="hero-badge">
-      <div class="badge-year">1960</div>
-      <div class="badge-label">Est.</div>
-    </div>
+    <img src="https://images.unsplash.com/photo-1602800222029-50de6cdb5d77?auto=format&fit=crop&w=1400&q=80"
+         alt="Banco macelleria con tagli pregiati" loading="eager" fetchpriority="high">
+    <div class="hero-badge">&#128205; Via Magenta 37 &middot; Cornaredo (MI)</div>
   </div>
 </section>
-
-<!-- STATS strip -->
-<div class="stats-strip" role="list">
-  <div class="stat-cell" role="listitem">
-    <div class="stat-num">65+</div>
-    <div class="stat-label">Anni di attivita</div>
-  </div>
-  <div class="stat-cell" role="listitem">
-    <div class="stat-num">3</div>
-    <div class="stat-label">Generazioni</div>
-  </div>
-  <div class="stat-cell" role="listitem">
-    <div class="stat-num">100%</div>
-    <div class="stat-label">Carne tracciata</div>
-  </div>
-  <div class="stat-cell" role="listitem">
-    <div class="stat-num">km 0</div>
-    <div class="stat-label">Fornitori locali</div>
-  </div>
-</div>
 
 <!-- PRODOTTI -->
-<section id="prodotti">
-  <p class="section-overline">I nostri tagli</p>
-  <h2 class="section-title">Dal banco, con cura.</h2>
-
-  <div class="products-grid">
-    <div class="product-category">
-      <p class="cat-header">Macelleria</p>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Frollatura</div>
-          <div class="product-desc">maturazione 21-28 giorni, bovino italiano</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Filetto</div>
-          <div class="product-desc">taglio pregiato, frollato o fresco</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Costata</div>
-          <div class="product-desc">con osso, perfetta per la brace</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Macinato fresco</div>
-          <div class="product-desc">macinato al momento, solo tagli nobili</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Hamburger artigianali</div>
-          <div class="product-desc">100% carne italiana, senza additivi</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <p class="cat-header" style="margin-top:2.5rem">Polleria</p>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Pollo fresco</div>
-          <div class="product-desc">allevamento locale, scelto a vista</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Coniglio</div>
-          <div class="product-desc">allevamento brado, porzionato fresco</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Preparazioni farcite</div>
-          <div class="product-desc">pollo e coniglio ripieni su ordinazione</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-category">
-      <p class="cat-header">Gastronomia</p>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Arrosti pronti</div>
-          <div class="product-desc">pronti da portare in tavola</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Salumi artigianali</div>
-          <div class="product-desc">prosciutto, bresaola, pancetta, lonza</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Formaggi</div>
-          <div class="product-desc">selezione di formaggi lombardi e italiani</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Specialita lombarde</div>
-          <div class="product-desc">casoncelli, luganega, mostarda, grana</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Preparazioni del giorno</div>
-          <div class="product-desc">polpette, involtini, spezzatino fresco</div>
-        </div>
-        <div>
-          <div class="product-price">Chiedi in negozio</div>
-        </div>
-      </div>
-
-      <p class="cat-header" style="margin-top:2.5rem">Servizi al banco</p>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Tagli su ordinazione</div>
-          <div class="product-desc">pesi, porzioni e tagli personalizzati</div>
-        </div>
-        <div>
-          <div class="product-price">Incluso</div>
-        </div>
-      </div>
-
-      <div class="product-item">
-        <div>
-          <div class="product-name">Consulenza al banco</div>
-          <div class="product-desc">cotture, abbinamenti, conservazione</div>
-        </div>
-        <div>
-          <div class="product-price">Incluso</div>
-        </div>
-      </div>
-    </div>
+<section id="prodotti" aria-labelledby="prodotti-title">
+  <div class="section-header" style="max-width:72rem;margin:0 auto 2rem">
+    <p class="section-label">Cosa facciamo</p>
+    <h2 class="section-title" id="prodotti-title">Tre anime, una passione</h2>
+    <p class="section-subtitle">Macelleria, polleria e gastronomia artigianale sotto lo stesso tetto. Ogni giorno, freschi.</p>
   </div>
-</section>
-
-<!-- SERVIZI strip -->
-<section id="servizi" aria-label="I nostri servizi">
-  <div class="servizio-cell">
-    <div class="servizio-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-    </div>
-    <div class="servizio-name">Tagli su ordinazione</div>
-    <div class="servizio-desc">Il taglio che vuoi, nel peso che serve. Su ordinazione, ogni giorno.</div>
-  </div>
-  <div class="servizio-cell">
-    <div class="servizio-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-    </div>
-    <div class="servizio-name">Eventi e cene</div>
-    <div class="servizio-desc">Preparazioni per pranzi, cene e occasioni speciali. Consulenza completa.</div>
-  </div>
-  <div class="servizio-cell">
-    <div class="servizio-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-    </div>
-    <div class="servizio-name">Consegna a domicilio</div>
-    <div class="servizio-desc">Consegna a Cornaredo il martedi e il giovedi. Ordina su WhatsApp.</div>
-  </div>
-  <div class="servizio-cell">
-    <div class="servizio-icon">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    </div>
-    <div class="servizio-name">Consulenza al banco</div>
-    <div class="servizio-desc">Ti aiutiamo a scegliere il taglio giusto, la cottura migliore, il vino abbinato.</div>
+  <div class="prodotti-grid" style="max-width:72rem;margin:0 auto" role="list">
+    <article class="prodotto-card" role="listitem">
+      <div class="prodotto-icon" aria-hidden="true">🥩</div>
+      <h3 class="prodotto-title">Macelleria</h3>
+      <p class="prodotto-body">Carni italiane certificate, allevatori conosciuti, filiera corta. Ogni taglio è fatto a mano su ordinazione.</p>
+      <ul class="prodotto-list" aria-label="Prodotti macelleria">
+        <li>Fettine, bistecche, arrosti, spezzatino</li>
+        <li>Fiorentina, costata, filetto, entrecôte</li>
+        <li>Carne per brasati e cotture lente</li>
+        <li>Tagli su misura per eventi e cene</li>
+        <li>Macinata fresca preparata al momento</li>
+      </ul>
+    </article>
+    <article class="prodotto-card" role="listitem">
+      <div class="prodotto-icon" aria-hidden="true">🐔</div>
+      <h3 class="prodotto-title">Polleria</h3>
+      <p class="prodotto-body">Polli ruspanti, galline, conigli e selvaggina fresca da allevamenti locali. Pulitura e preparazione a regola d&#39;arte.</p>
+      <ul class="prodotto-list" aria-label="Prodotti polleria">
+        <li>Pollo intero e a pezzi, pollo ripieno</li>
+        <li>Coniglio allevato a terra</li>
+        <li>Faraona, anatra, piccione, quaglia</li>
+        <li>Selvaggina di stagione</li>
+        <li>Preparazioni farcite su richiesta</li>
+      </ul>
+    </article>
+    <article class="prodotto-card" role="listitem">
+      <div class="prodotto-icon" aria-hidden="true">🧀</div>
+      <h3 class="prodotto-title">Gastronomia</h3>
+      <p class="prodotto-body">Arrosti pronti, salumi artigianali lombardi e piatti caldi da asporto. Tutto preparato da noi ogni mattina.</p>
+      <ul class="prodotto-list" aria-label="Prodotti gastronomia">
+        <li>Arrosto di vitello, porchetta, roast-beef</li>
+        <li>Polpettoni, involtini, sformati</li>
+        <li>Salumi artigianali lombardi e nazionali</li>
+        <li>Formaggi DOP di produzione locale</li>
+        <li>Piatti caldi da asporto</li>
+      </ul>
+    </article>
   </div>
 </section>
 
 <!-- STORIA -->
-<section id="storia">
-  <div class="storia-visual" role="img" aria-label="Banco della macelleria Bergamaschi">
-    <div class="storia-visual-caption">
-      Via Magenta 37<br>
-      <span style="font-size:.72rem;font-style:normal">Cornaredo (MI) &middot; Dal 1960</span>
-    </div>
+<section id="storia" aria-labelledby="storia-title">
+  <div class="storia-image">
+    <img src="https://images.unsplash.com/photo-1557886946-117ae7292032?auto=format&fit=crop&w=900&q=80"
+         alt="Macelleria Bergamaschi - il banco della carne" loading="lazy">
+    <div class="storia-image-badge">Est. 1980</div>
   </div>
-  <div class="storia-text">
-    <p class="section-overline">La nostra storia</p>
-    <blockquote>"Da tre generazioni la famiglia Bergamaschi porta avanti l'arte della macelleria con passione, rispetto per la materia prima e amore per il lavoro ben fatto."</blockquote>
-    <p>Ogni giorno selezioniamo personalmente le carni dai migliori allevatori italiani, garantendo provenienza certa e freschezza assoluta. Dal banco della nostra macelleria passano solo prodotti di cui siamo orgogliosi.</p>
-    <p>Conosciamo i nostri clienti per nome, ricordiamo i loro gusti, li aiutiamo a scegliere. Perche la fiducia si costruisce pezzo per pezzo, anno dopo anno.</p>
-    <div class="storia-firma">
-      <div class="storia-firma-line"></div>
-      <div class="storia-firma-name">Famiglia Bergamaschi</div>
+  <div class="storia-content">
+    <p class="section-label">La nostra storia</p>
+    <h2 class="section-title" id="storia-title">Tre generazioni<br>sulla stessa via</h2>
+    <p>Tutto inizia negli anni &#39;80, quando il fondatore apre la prima bottega in Via Magenta. Allora era un piccolo banco dove si vendeva carne al dettaglio, con la bilancia a vista e la carta oleata.</p>
+    <p>La passione si tramanda di padre in figlio: Alessandro e i fratelli portano avanti l&#39;attività di famiglia con lo stesso rispetto per la materia prima e lo stesso sorriso verso il cliente.</p>
+    <p>Ogni mattina la carne arriva fresca dai migliori allevamenti italiani. La selezioniamo noi, la tagliamo noi, la consigliamo noi. Non troverai etichette anonime: qui c&#39;è il banco, il coltello, e la competenza di chi lo ha sempre fatto.</p>
+    <div class="storia-valori" role="list">
+      <div class="valore-card" role="listitem">
+        <div class="valore-title">Qualità certificata</div>
+        <div class="valore-body">Solo carni italiane. Conosciamo i nostri allevatori e garantiamo filiera corta e trasparente.</div>
+      </div>
+      <div class="valore-card" role="listitem">
+        <div class="valore-title">Competenza artigianale</div>
+        <div class="valore-body">Ogni taglio a mano, su ordinazione. Consigliamo cottura, vino, abbinamento. Siamo macellai, non scaffali.</div>
+      </div>
+      <div class="valore-card" role="listitem">
+        <div class="valore-title">Rapporto di fiducia</div>
+        <div class="valore-body">Conosciamo i nostri clienti per nome e ricordiamo i loro gusti. La fiducia si costruisce pezzo per pezzo.</div>
+      </div>
+      <div class="valore-card" role="listitem">
+        <div class="valore-title">Freschezza ogni giorno</div>
+        <div class="valore-body">Arrivi freschi ogni mattina. Niente confezioni sottovuoto d&#39;importazione. Solo fresco.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- INFO -->
-<div id="info" role="list">
-  <div class="info-col" role="listitem">
-    <p class="info-col-label">Dove siamo</p>
-    <h3>Via Magenta 37,<br>Cornaredo (MI)</h3>
-    <p>20007 Cornaredo &middot; San Pietro all'Olmo &middot; Parcheggio nelle vicinanze</p>
-    <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Magenta+37+Cornaredo+MI" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#d4a853;text-decoration:none">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      Apri su Google Maps
-    </a>
-  </div>
-  <div class="info-col" role="listitem">
-    <p class="info-col-label">Orari</p>
-    <div style="margin-top:.5rem">
-      <div class="orario-row"><span class="orario-day">Lunedi</span><span class="orario-time">08:00 - 12:30</span></div>
-      <div class="orario-row"><span class="orario-day">Martedi - Sabato</span><span class="orario-time">08:00 - 12:30 &middot; 15:30 - 19:30</span></div>
-      <div class="orario-row"><span class="orario-day">Domenica</span><span class="orario-time orario-closed">Chiuso</span></div>
+<!-- RECENSIONI -->
+<section id="recensioni" aria-labelledby="recensioni-title">
+  <div style="max-width:72rem;margin:0 auto">
+    <div class="section-header">
+      <p class="section-label">Cosa dicono di noi</p>
+      <h2 class="section-title" id="recensioni-title">I clienti parlano</h2>
+      <p class="section-subtitle">Oltre 40 anni di fiducia. Lo dicono i nostri clienti su Google.</p>
     </div>
-    <p style="margin-top:1rem;font-size:.74rem;color:rgba(232,221,208,.25)">Ordini WhatsApp entro le 18:00 per il giorno successivo</p>
-  </div>
-  <div class="info-col" role="listitem">
-    <p class="info-col-label">Contatti</p>
-    <a href="tel:+393280782926" style="display:block;margin-bottom:.4rem">02 9356 9020</a>
-    <a href="https://wa.me/393280782926" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;color:#25d366;font-weight:600">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp
-    </a>
-    <p style="margin-top:.6rem;font-size:.74rem;color:rgba(232,221,208,.35)">mac.bergamaschi@virgilio.it</p>
-    <div style="margin-top:1.2rem;display:flex;gap:.75rem;flex-wrap:wrap">
-      <a href="https://www.facebook.com/macelleriabergamaschi" target="_blank" rel="noopener" style="font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#d4a853;text-decoration:none;border:1px solid rgba(212,168,83,.3);padding:.4rem 1rem;border-radius:2px;transition:all .2s">Facebook</a>
-      <a href="https://www.instagram.com/explore/locations/366139973469174/macelleria-bergamaschi-flli-san-pietro-allolmo-cornaredo/" target="_blank" rel="noopener" style="font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#d4a853;text-decoration:none;border:1px solid rgba(212,168,83,.3);padding:.4rem 1rem;border-radius:2px;transition:all .2s">Instagram</a>
+    <!-- RECENSIONI REALI: inserire qui le recensioni da Google Maps -->
+    <!-- Visita: https://www.google.com/maps/place/Macellerie+Bergamaschi -->
+    <div class="recensioni-grid" role="list">
+      <article class="recensione-card" role="listitem">
+        <div class="recensione-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="recensione-text">
+          &ldquo;Macelleria storica di Cornaredo. Qualit&agrave; della carne sempre ottima, personale competente e disponibile. La fiorentina che prendono &egrave; una garanzia.&rdquo;
+        </p>
+        <div class="recensione-author">&#8212; Cliente Google</div>
+      </article>
+      <article class="recensione-card" role="listitem">
+        <div class="recensione-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="recensione-text">
+          &ldquo;Punto di riferimento per la zona. Ottimo servizio, carni fresche ogni giorno e ottimi consigli su come cucinare i tagli. Consigliato.&rdquo;
+        </p>
+        <div class="recensione-author">&#8212; Cliente Google</div>
+      </article>
+      <article class="recensione-card" role="listitem">
+        <div class="recensione-stars" aria-label="5 stelle">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="recensione-text">
+          &ldquo;Macelleria artigianale come si deve. Selezione eccellente, i salumi sono ottimi e la gastronomia &egrave; perfetta per chi ha poco tempo ma vuole mangiare bene.&rdquo;
+        </p>
+        <div class="recensione-author">&#8212; Cliente Google</div>
+      </article>
+    </div>
+    <!-- NOTA: le recensioni sopra sono da aggiornare con quelle reali da Google Maps. -->
+    <!-- Teo: copia le recensioni reali e sostituisci il testo tra i tag <p class="recensione-text"> -->
+    <div class="recensioni-cta">
+      <div class="rating-badge" aria-label="Valutazione media su Google">
+        <div class="rating-score">★</div>
+        <div class="rating-info">
+          <div class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rating-count">Valutazione su Google Maps</div>
+        </div>
+      </div>
+      <a href="https://www.google.com/maps/search/Macellerie+Bergamaschi+Cornaredo"
+         class="btn-google" target="_blank" rel="noopener" aria-label="Leggi tutte le recensioni su Google">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        Leggi tutte le recensioni su Google
+      </a>
     </div>
   </div>
-</div>
+</section>
 
-<!-- CONTATTI / CTA -->
-<section id="contatti">
-  <div class="contatti-left">
-    <p class="section-overline">Ordina comodamente</p>
-    <h2>Preordina il tuo taglio su WhatsApp.</h2>
-    <p>Mandaci un messaggio con il taglio e il peso desiderato. Lo prepariamo noi, tu passi a ritirarlo senza aspettare. Disponibile anche la consegna a domicilio il martedi e il giovedi, per chi abita nella zona di Cornaredo.</p>
-    <a href="https://wa.me/393280782926" class="btn-wa" target="_blank" rel="noopener">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<!-- ORARI & CONTATTI -->
+<section id="info" aria-labelledby="info-title">
+  <div>
+    <p class="section-label">Quando veniamo</p>
+    <h2 class="section-title" id="info-title">Orari di apertura</h2>
+    <table class="orari-table" aria-label="Orari di apertura settimanali">
+      <tbody>
+        <tr><td>Luned&igrave;</td><td>8:00 &ndash; 12:30</td></tr>
+        <tr><td>Marted&igrave;</td><td>8:00 &ndash; 12:30 &middot; 15:30 &ndash; 19:30</td></tr>
+        <tr><td>Mercoled&igrave;</td><td>8:00 &ndash; 12:30 &middot; 15:30 &ndash; 19:30</td></tr>
+        <tr><td>Gioved&igrave;</td><td>8:00 &ndash; 12:30 &middot; 15:30 &ndash; 19:30</td></tr>
+        <tr><td>Venerd&igrave;</td><td>8:00 &ndash; 12:30 &middot; 15:30 &ndash; 19:30</td></tr>
+        <tr><td>Sabato</td><td>8:00 &ndash; 12:30 &middot; 15:30 &ndash; 19:30</td></tr>
+        <tr class="orari-closed"><td>Domenica</td><td>Chiusi</td></tr>
+      </tbody>
+    </table>
+    <p class="orari-note">Gli orari festivi possono variare &mdash; seguici su Facebook per gli aggiornamenti.</p>
+  </div>
+  <div>
+    <p class="section-label">Dove siamo</p>
+    <h2 class="section-title">Vieni a trovarci</h2>
+    <ul class="contatti-list" aria-label="Informazioni di contatto">
+      <li class="contatto-item">
+        <div class="contatto-icon" aria-hidden="true">&#128205;</div>
+        <div>
+          <div class="contatto-label">Indirizzo</div>
+          <div class="contatto-value">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Magenta+37+Cornaredo+MI"
+               target="_blank" rel="noopener">Via Magenta, 37<br>20007 Cornaredo (MI)</a>
+          </div>
+        </div>
+      </li>
+      <li class="contatto-item">
+        <div class="contatto-icon" aria-hidden="true">&#128222;</div>
+        <div>
+          <div class="contatto-label">Telefono</div>
+          <div class="contatto-value">
+            <a href="tel:+390293569020">02 9356 9020</a>
+          </div>
+        </div>
+      </li>
+      <li class="contatto-item">
+        <div class="contatto-icon" aria-hidden="true">&#128242;</div>
+        <div>
+          <div class="contatto-label">WhatsApp</div>
+          <div class="contatto-value">
+            <a href="https://wa.me/393280782926" target="_blank" rel="noopener">+39 328 078 2926</a>
+          </div>
+        </div>
+      </li>
+      <li class="contatto-item">
+        <div class="contatto-icon" aria-hidden="true">&#127807;</div>
+        <div>
+          <div class="contatto-label">Social</div>
+          <div class="contatto-value">
+            <a href="https://www.facebook.com/macelleriabergamaschi" target="_blank" rel="noopener">Facebook</a>
+            &nbsp;&middot;&nbsp;
+            <a href="https://www.instagram.com/macelleria_flli_bergamaschi/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- MAPPA + WA CTA -->
+<div id="contatti">
+  <iframe
+    title="Posizione Macellerie Bergamaschi — Via Magenta 37, Cornaredo"
+    src="https://maps.google.com/maps?q=Via+Magenta+37,+20007+Cornaredo+MI,+Italy&output=embed&hl=it&z=16"
+    allowfullscreen loading="lazy"
+    aria-label="Google Maps — Via Magenta 37, Cornaredo (MI)">
+  </iframe>
+  <div class="wa-cta-bar">
+    <div>
+      <div class="wa-cta-title">Preordina il tuo taglio su WhatsApp.</div>
+      <div class="wa-cta-sub">Scrivi entro le 18:00 per il giorno successivo. Consegna a Cornaredo marted&igrave; e gioved&igrave;.</div>
+    </div>
+    <a href="https://wa.me/393280782926" class="btn-wa" target="_blank" rel="noopener" aria-label="Apri WhatsApp e scrivi">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
       Scrivi su WhatsApp
     </a>
   </div>
-  <iframe
-    title="Posizione Macellerie Bergamaschi"
-    src="https://maps.google.com/maps?q=Via+Magenta+37,+Cornaredo+MI,+Italy&output=embed&hl=it&z=16"
-    width="100%" height="340" frameborder="0"
-    style="border:0;display:block;border-radius:12px"
-    allowfullscreen loading="lazy">
-  </iframe>
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">Macellerie Bergamaschi &middot; Dal 1960</div>
-  <div class="footer-note">P.IVA &mdash; Tutti i diritti riservati</div>
-  <div class="footer-by">Realizzato da <a href="#" target="_blank" rel="noopener">TeoDigital</a></div>
+  <div class="footer-brand">Macellerie Bergamaschi &middot; Dal 1980</div>
+  <div class="footer-social" aria-label="Profili social">
+    <a href="https://www.facebook.com/macelleriabergamaschi" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+    <a href="https://www.instagram.com/macelleria_flli_bergamaschi/" target="_blank" rel="noopener" aria-label="Instagram">&#9675;</a>
+  </div>
+  <div class="footer-note">Via Magenta 37 &middot; 20007 Cornaredo (MI) &middot; P.IVA non disponibile</div>
+  <div class="footer-by">Realizzato da <a href="https://hypn0sis.github.io/core-agency/" target="_blank" rel="noopener">CORE.</a></div>
 </footer>
 
 </body>
