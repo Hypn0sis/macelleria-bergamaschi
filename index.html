@@ -576,10 +576,75 @@
     Per aggiungere il rating medio: imposta RATING = "4.8" e COUNT = "87"
     ─────────────────────────────────────────────────────────────────────── */
     var REVIEWS = [
-      /* incolla qui le recensioni reali */
+      {
+        "stars": 5,
+        "text": "Un negozio \"boutique\" di paese, con la genuinità e la qualità tipica delle piccole comunità. Carne di qualità al giusto prezzo, piatti trasformati, come i cestini, i fagottini e molti altri. Formaggio di vasta gamma e sempre di ottima qualità. La simpatia del personale chiude il cerchio e lo identifica come un negozio per una spesa di qualità. Bravi!!!",
+        "author": "Vincenzo Zavaglia",
+        "date": "6 mesi fa"
+      },
+      {
+        "stars": 5,
+        "text": "Carni salumi e formaggi di altissima qualità, Bovine, suine, pollame, e molto altro. Qui si possono inoltre trovare tantissime specialità di carne, pronte per essere cucinate come le valdostane, spiedini, involtini, arrosticini, cotolette di pollo e maiale già panate, arrosti, ecc.ecc. tutte freschissime e fatte molto bene. Consigliatissimo!",
+        "author": "Mauro Paietta",
+        "date": "un anno fa"
+      },
+      {
+        "stars": 5,
+        "text": "Macelleria di alto livello. Cordialità e gentilezza sono la prima cosa che ti colpisce. Pronti a seguirti nella scelta del prodotto migliore e il consiglio giusto anche per cucinare la carne scelta. La consiglio perché oltre a una bella scelta di carne c'è una vasta scelta anche di salumi e formaggi (tanti anche di capra).",
+        "author": "Donatella Minora",
+        "date": "4 anni fa"
+      },
+      {
+        "stars": 5,
+        "text": "Senza dubbio la migliore macelleria della zona. Carne buonissima, prodotti sempre freschi e di alta qualità. Considerando quello che si trova in giro di questi tempi direi che il rapporto qualità prezzo è ottimo. Aggiungo che il personale è estremamente competente e disponibile. Assolutamente consigliato!",
+        "author": "G C",
+        "date": "2 anni fa"
+      },
+      {
+        "stars": 5,
+        "text": "Due generazioni di macellai al servizio degli appassionati di carne e non solo. Sempre pronti a consigliare e fornire i migliori tagli, ormai noti in altre città dove li ho portati per cucinarli. Ottima anche la fornitura di formaggio, salumi, pasta ripiena e piatti pronti. Fiducia totale.",
+        "author": "Fabio Giulio Pirrotta",
+        "date": "un anno fa"
+      },
+      {
+        "stars": 5,
+        "text": "Macelleria storica. Qualità e cortesia. Unica pecca è l'affollamento costante (soprattutto al sabato) ma anche questo è sinonimo di qualità. Diversi addetti alla vendita dietro al bancone per contenere i tempi. Carne nostrana dei loro allevamenti di zona. Una sicurezza.",
+        "author": "Nicola Mascaro",
+        "date": "3 mesi fa"
+      },
+      {
+        "stars": 5,
+        "text": "Carne di ottima qualità e preparata con competenza. Capaci di soddisfare le richieste dei clienti! Salumi e formaggi buonissimi con grande varietà. Competenza e gentilezza al top.",
+        "author": "cammisa Jolanda",
+        "date": "1 mese fa"
+      },
+      {
+        "stars": 5,
+        "text": "Cordialità, competenza e professionalità. Carni di qualità, ottimi salumi e formaggi. Una macelleria che è una garanzia! Non da ultimo proprietari e personale simpatici.",
+        "author": "Marina Orlandi",
+        "date": "10 mesi fa"
+      },
+      {
+        "stars": 5,
+        "text": "Ottimi prodotti, sono 22 anni che vado a comprare la carne da loro e mi sono sempre trovato bene. Personale gentile e accogliente.",
+        "author": "Andrea Ruiu",
+        "date": "7 mesi fa"
+      },
+      {
+        "stars": 5,
+        "text": "Grande varietà di prodotti, oltre la carne ma anche cibi preparati per la cottura. Personale cordiale e veloce nel servizio.",
+        "author": "Nicoletta Landini",
+        "date": "4 mesi fa"
+      },
+      {
+        "stars": 5,
+        "text": "Prodotti di qualità con una vasta scelta tra carne e prodotti già pronti. Personale qualificato, gentile e disponibile.",
+        "author": "Paola Colasuonno",
+        "date": "5 mesi fa"
+      }
     ];
-    var RATING = null; /* es: "4.8" */
-    var COUNT  = null; /* es: "87"  */
+    var RATING = null;
+    var COUNT  = "232";
 
     if(RATING){
       document.getElementById('avg-rating').textContent = RATING;
