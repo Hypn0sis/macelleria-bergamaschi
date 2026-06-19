@@ -384,13 +384,15 @@
   <ul class="nav-links" role="list">
     <li><a href="#prodotti">Prodotti</a></li>
     <li><a href="#storia">La storia</a></li>
+    <li><a href="#selezione">Come scegliamo</a></li>
+    <li><a href="#perle">Il banco</a></li>
     <li><a href="#recensioni">Recensioni</a></li>
     <li><a href="#info">Orari</a></li>
     <li><a href="#contatti">Dove siamo</a></li>
   </ul>
-  <a href="https://wa.me/393280782926" class="nav-cta" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
+  <a href="https://wa.me/393280782926?text=Ciao%2C+vorrei+vedere+il+banco+di+oggi!" class="nav-cta" target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp per vedere il banco live">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
-    WhatsApp
+    Vedi il banco live
   </a>
 </nav>
 
@@ -549,6 +551,158 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- LE PERLE DEL BANCO -->
+<section id="perle" aria-labelledby="perle-title">
+  <style>
+    #perle { padding: 6rem 0; background: #0e0e0e; overflow: hidden; }
+    .perle-header { padding: 0 2rem; max-width: 72rem; margin: 0 auto 3rem; }
+    .perle-sub { font-size: .95rem; color: var(--muted); max-width: 52ch; margin-top: .75rem; }
+
+    /* GALLERY GRID */
+    .perle-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 280px 280px;
+      gap: 3px;
+      max-width: 100%;
+    }
+    /* Bento layout: prima foto (banco) occupa 2 colonne */
+    .perle-item { position: relative; overflow: hidden; background: #1a1a1a; }
+    .perle-item:first-child { grid-column: span 2; }
+    .perle-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .6s cubic-bezier(.4,0,.2,1);
+      display: block;
+    }
+    .perle-item:hover img { transform: scale(1.04); }
+    .perle-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.82));
+      padding: 2rem 1.25rem .9rem;
+      font-size: .78rem; color: rgba(242,237,229,.85);
+      letter-spacing: .04em;
+      transform: translateY(4px);
+      transition: transform .3s;
+    }
+    .perle-item:hover .perle-caption { transform: translateY(0); }
+    .perle-caption-label {
+      font-size: .65rem; color: var(--gold);
+      letter-spacing: .1em; text-transform: uppercase;
+      margin-bottom: .25rem;
+    }
+
+    /* CTA banner */
+    .perle-cta-bar {
+      max-width: 72rem; margin: 3rem auto 0;
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1.5rem; flex-wrap: wrap;
+    }
+    .perle-cta-text { font-size: .95rem; color: var(--muted); }
+    .perle-cta-text strong { color: var(--text); font-weight: 500; }
+    .btn-perle-wa {
+      display: inline-flex; align-items: center; gap: .5rem;
+      border: 1px solid rgba(37,211,102,.3); color: #25D366;
+      padding: .6rem 1.25rem; border-radius: 6px;
+      font-size: .82rem; font-weight: 500;
+      transition: background .2s, border-color .2s;
+      white-space: nowrap;
+    }
+    .btn-perle-wa:hover { background: rgba(37,211,102,.08); border-color: #25D366; }
+
+    @media(max-width:760px){
+      .perle-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 220px);
+      }
+      .perle-item:first-child { grid-column: span 2; }
+    }
+  </style>
+
+  <div class="perle-header">
+    <p class="section-label">Dal nostro banco</p>
+    <h2 class="section-title" id="perle-title">Le Perle del Banco</h2>
+    <p class="perle-sub">Ogni giorno sul bancone passano pezzi fuori dal comune. Costate con marezzatura da manuale, tagli selezionati direttamente dall'allevatore, preparazioni artigianali che esistono solo qui.</p>
+  </div>
+
+  <div class="perle-grid" role="list" aria-label="Galleria prodotti">
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/banco.jpg" alt="Il banco della Macelleria Bergamaschi" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Il banco</div>
+        Ogni mattina freschi — salsicce, tagli e preparazioni del giorno
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/costata-1.jpg" alt="Costata di manzo con marezzatura pregiata" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Costata di manzo</div>
+        Marezzatura da primo taglio — selezione diretta dall'allevatore
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/taglio-mano-2.jpg" alt="Fiorentina con marezzatura superiore" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Fiorentina</div>
+        Marezzatura superiore — quando il taglio parla da solo
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/costata-2.jpg" alt="Lombata di manzo su tagliere" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Lombata</div>
+        Selezione di razza — filiera corta, qualità verificata
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/costata-grande.jpg" alt="Costata intera in piedi — pezzo eccezionale" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Pezzo del giorno</div>
+        La regina del banco — disponibile solo finché dura
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/taglio-mano-1.jpg" alt="Macellaio con taglio di manzo eccezionale" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Selezione Matteo</div>
+        Scelto personalmente dall'allevatore — così arriva da noi
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/arrosto-ripieno.jpg" alt="Arrosto ripieno artigianale della gastronomia" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Gastronomia</div>
+        Arrosto ripieno — preparazione artigianale del giorno
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/tartare.jpg" alt="Tartare gourmet in vassoi pronti" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Tartare gourmet</div>
+        Battuta a coltello ogni mattina — condimenti artigianali
+      </div>
+    </div>
+
+  </div>
+
+  <div class="perle-cta-bar">
+    <p class="perle-cta-text"><strong>Vuoi sapere cosa c'è oggi sul banco?</strong> Scrivici — ti mandiamo una foto live dei tagli del giorno e prenotiamo il tuo pezzo prima che finisca.</p>
+    <a href="https://wa.me/393280782926?text=Ciao%2C+cosa+c%27%C3%A8+oggi+sul+banco%3F" class="btn-perle-wa" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+      Vedi il banco di oggi
+    </a>
   </div>
 </section>
 
