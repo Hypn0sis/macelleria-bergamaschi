@@ -565,13 +565,14 @@
     .perle-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 280px 280px;
+      grid-template-rows: 280px 280px 280px;
       gap: 3px;
       max-width: 100%;
     }
-    /* Bento layout: prima foto (banco) occupa 2 colonne */
+    /* Bento: primo item (banco panoramico) e ultimo (dolce) span 2 colonne */
     .perle-item { position: relative; overflow: hidden; background: #1a1a1a; }
     .perle-item:first-child { grid-column: span 2; }
+    .perle-item:last-child  { grid-column: span 2; }
     .perle-item img {
       width: 100%; height: 100%;
       object-fit: cover;
@@ -617,9 +618,10 @@
     @media(max-width:760px){
       .perle-grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 220px);
+        grid-template-rows: repeat(5, 220px);
       }
       .perle-item:first-child { grid-column: span 2; }
+      .perle-item:last-child  { grid-column: span 2; }
     }
   </style>
 
@@ -692,6 +694,22 @@
       <div class="perle-caption">
         <div class="perle-caption-label">Tartare gourmet</div>
         Battuta a coltello ogni mattina — condimenti artigianali
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/costata-3.jpg" alt="Costata di manzo su tagliere in legno" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Costata</div>
+        Dal tagliere al piatto — ogni taglio una storia di qualità
+      </div>
+    </div>
+
+    <div class="perle-item" role="listitem">
+      <img src="assets/images/banco/dolce-noce.jpg" alt="Preparazione gastronomia artigianale con noci e crema" loading="lazy">
+      <div class="perle-caption">
+        <div class="perle-caption-label">Gastronomia</div>
+        Creazioni artigianali — ogni giorno qualcosa di diverso sul banco
       </div>
     </div>
 
