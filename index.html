@@ -341,20 +341,7 @@ footer{
 <!-- NAV con logo SVG inline -->
 <nav aria-label="Navigazione principale">
   <a href="#hero" class="nav-brand" aria-label="Macellerie Bergamaschi">
-    <!-- Logo SVG inline F.lli Bergamaschi -->
-    <svg width="42" height="42" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <!-- F.lli graphic: F in rosso + 3 barre verticali -->
-      <!-- F main letter -->
-      <path d="M32 25 H72 V50 H52 V75 H68 V100 H32 Z" fill="#E32B1E" rx="4"/>
-      <!-- dot for F -->
-      <circle cx="22" cy="155" r="9" fill="#E32B1E"/>
-      <!-- 3 lli bars -->
-      <rect x="85" y="25" width="18" height="70" rx="9" fill="#E32B1E"/>
-      <rect x="113" y="25" width="18" height="70" rx="9" fill="#E32B1E"/>
-      <rect x="141" y="25" width="18" height="70" rx="9" fill="#E32B1E"/>
-      <!-- dot above last lli (i dot) -->
-      <circle cx="150" cy="105" r="9" fill="#E32B1E"/>
-    </svg>
+    <img src="assets/images/logo.jpg" alt="F.lli Bergamaschi logo" height="42" style="object-fit:contain;display:block">
     <div>
       <div class="nav-brand-name">Macellerie Bergamaschi</div>
       <div class="nav-brand-sub">Dal 1960 &middot; Cornaredo</div>
@@ -677,11 +664,13 @@ footer{
       Scrivi su WhatsApp
     </a>
   </div>
-  <div class="map-placeholder" role="img" aria-label="Mappa - Via Magenta 37, Cornaredo (MI)">
-    <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Magenta+37+Cornaredo+MI" target="_blank" rel="noopener" style="text-decoration:none">
-      <div class="map-label">Via Magenta 37 &middot; Cornaredo (MI)</div>
-    </a>
-  </div>
+  <iframe
+    title="Posizione Macellerie Bergamaschi"
+    src="https://maps.google.com/maps?q=Via+Magenta+37,+Cornaredo+MI,+Italy&output=embed&hl=it&z=16"
+    width="100%" height="340" frameborder="0"
+    style="border:0;display:block;border-radius:12px"
+    allowfullscreen loading="lazy">
+  </iframe>
 </section>
 
 <!-- FOOTER -->
