@@ -500,6 +500,58 @@
   </div>
 </section>
 
+<!-- COME SCEGLIAMO -->
+<section id="selezione" aria-labelledby="selezione-title">
+  <style>
+    #selezione{padding:6rem 2rem;background:var(--surface)}
+    .selezione-inner{max-width:72rem;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .selezione-image-wrap{position:relative}
+    .selezione-image-wrap img{width:100%;height:480px;object-fit:cover;border-radius:var(--radius)}
+    .selezione-badge{position:absolute;bottom:1.5rem;left:1.5rem;background:var(--gold);color:#1a0a00;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.45rem .9rem;border-radius:2rem}
+    .selezione-pillars{display:flex;flex-direction:column;gap:2rem;margin-top:2.5rem}
+    .pillar{display:flex;gap:1.25rem;align-items:flex-start}
+    .pillar-icon{flex-shrink:0;width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.25);display:flex;align-items:center;justify-content:center;font-size:1rem}
+    .pillar-body{}
+    .pillar-title{font-family:'Playfair Display',Georgia,serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:.35rem}
+    .pillar-text{font-size:.875rem;color:var(--muted);line-height:1.7}
+    @media(max-width:860px){.selezione-inner{grid-template-columns:1fr}.selezione-image-wrap img{height:300px}}
+  </style>
+  <div class="selezione-inner">
+    <div class="selezione-image-wrap">
+      <img src="assets/images/selezione.jpg" alt="Selezione diretta dei prodotti al mercato" loading="lazy">
+      <div class="selezione-badge">&#127968; Filiera corta</div>
+    </div>
+    <div>
+      <p class="section-label">Come scegliamo</p>
+      <h2 class="section-title" id="selezione-title">La selezione diretta è la nostra firma</h2>
+      <p style="color:var(--muted);line-height:1.8;margin-bottom:2rem">Matteo non aspetta che la merce arrivi: va lui stesso alla fonte, ogni volta. Una scelta che richiede tempo, ma che garantisce al cliente quello che non si trova altrove.</p>
+      <div class="selezione-pillars">
+        <div class="pillar">
+          <div class="pillar-icon">&#128062;</div>
+          <div class="pillar-body">
+            <div class="pillar-title">Selezione degli animali</div>
+            <div class="pillar-text">Matteo si reca direttamente dagli allevatori locali per scegliere gli animali uno per uno. Conosce la provenienza, l'alimentazione e le condizioni di allevamento di ogni capo.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">&#127848;</div>
+          <div class="pillar-body">
+            <div class="pillar-title">Formaggi scelti nei caseifici</div>
+            <div class="pillar-text">Ogni forma in banco è stata assaggiata da Matteo direttamente nel caseificio. Solo i formaggi che superano la sua selezione entrano in negozio.</div>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">&#128205;</div>
+          <div class="pillar-body">
+            <div class="pillar-title">Chilometro zero, qualità verificata</div>
+            <div class="pillar-text">Allevamenti e caseifici a pochi chilometri da Cornaredo. Filiera corta, tracciabilità totale, nessun intermediario tra il produttore e il vostro bancone.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- RECENSIONI -->
 <section id="recensioni" aria-labelledby="recensioni-title">
   <style>
