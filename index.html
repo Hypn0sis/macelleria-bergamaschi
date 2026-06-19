@@ -413,7 +413,7 @@
     </div>
   </div>
   <div class="hero-right" role="img" aria-label="Banco della macelleria Bergamaschi">
-    <img src="https://images.unsplash.com/photo-1602800222029-50de6cdb5d77?auto=format&fit=crop&w=1400&q=80"
+    <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?auto=format&fit=crop&w=1400&q=80"
          alt="Banco macelleria con tagli pregiati" loading="eager" fetchpriority="high">
     <div class="hero-badge">&#128205; Via Magenta 37 &middot; Cornaredo (MI)</div>
   </div>
@@ -469,7 +469,7 @@
 <!-- STORIA -->
 <section id="storia" aria-labelledby="storia-title">
   <div class="storia-image">
-    <img src="https://images.unsplash.com/photo-1557886946-117ae7292032?auto=format&fit=crop&w=900&q=80"
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80"
          alt="Macelleria Bergamaschi - il banco della carne" loading="lazy">
     <div class="storia-image-badge">Est. 1980</div>
   </div>
@@ -695,9 +695,16 @@
       })(i);
     }
 
+    function cardWidth(){
+      var c=track.children[0];
+      if(!c) return 0;
+      var r=c.getBoundingClientRect();
+      return r.width > 0 ? r.width + 20 : c.offsetWidth + 20;
+    }
+
     function go(idx){
       current=Math.max(0,Math.min(idx,n-pp()));
-      var w=track.children[0]?track.children[0].offsetWidth+20:0;
+      var w=cardWidth();
       track.style.transform='translateX(-'+(current*w)+'px)';
       var page=Math.floor(current/pp());
       Array.from(dotsEl.children).forEach(function(d,i){d.classList.toggle('active',i===page);});
@@ -710,13 +717,15 @@
       go(current===0?Math.max(0,n-pp()):current-pp());
     });
 
-    var timer=setInterval(function(){go(current+pp()>=n?0:current+pp());},6000);
+    var timer;
+    function startTimer(){
+      timer=setInterval(function(){go(current+pp()>=n?0:current+pp());},5000);
+    }
     var sec=document.getElementById('recensioni');
     sec.addEventListener('mouseenter',function(){clearInterval(timer);});
-    sec.addEventListener('mouseleave',function(){
-      timer=setInterval(function(){go(current+pp()>=n?0:current+pp());},6000);
-    });
+    sec.addEventListener('mouseleave',startTimer);
     window.addEventListener('resize',function(){go(0);});
+    window.addEventListener('load',startTimer);
   })();
   </script>
 </section>
