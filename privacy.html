@@ -82,7 +82,7 @@
       </ul>
 
       <h2>Cookie</h2>
-      <p>Questo sito non utilizza cookie di profilazione. Non sono presenti sistemi di analytics, pixel di tracciamento o cookie di terze parti. Il sito è una semplice vetrina informativa statica.</p>
+      <p>Questo sito non utilizza cookie di profilazione o tracciamento. Vengono utilizzati esclusivamente cookie tecnici necessari al funzionamento delle pagine. Il sito carica font tipografici da Google Fonts (fonts.googleapis.com): questa operazione comporta il trasferimento dell'indirizzo IP del visitatore ai server Google, secondo la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--clr-primary);">Privacy Policy di Google</a>. Non sono presenti sistemi di analytics, pixel di tracciamento o altri cookie di terze parti.</p>
 
       <h2>Durata della conservazione</h2>
       <p>I dati forniti vengono conservati per il tempo strettamente necessario a evadere la richiesta dell'utente e per adempiere agli obblighi di legge.</p>
@@ -149,5 +149,12 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+<!-- Cookie notice -->
+<div id="cn" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#2c1810;color:#f5f0eb;padding:.75rem 1.5rem;align-items:center;justify-content:space-between;z-index:9999;font-size:.78rem;gap:1rem;border-top:2px solid #8b1a1a;">
+  <span>Cookie tecnici + font Google Fonts &middot; nessun tracciamento. <a href="privacy.html" style="color:#d4a853;text-decoration:underline;">Privacy policy</a></span>
+  <button onclick="document.getElementById('cn').style.display='none';localStorage.setItem('cn','1')" style="background:#8b1a1a;color:#fff;border:none;padding:.45rem 1.1rem;cursor:pointer;font-size:.75rem;font-weight:600;white-space:nowrap;flex-shrink:0;">Ho capito</button>
+</div>
+<script>if(!localStorage.getItem('cn'))document.getElementById('cn').style.display='flex';</script>
 </body>
 </html>

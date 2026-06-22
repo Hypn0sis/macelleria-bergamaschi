@@ -156,5 +156,12 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+<!-- Cookie notice -->
+<div id="cn" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#2c1810;color:#f5f0eb;padding:.75rem 1.5rem;align-items:center;justify-content:space-between;z-index:9999;font-size:.78rem;gap:1rem;border-top:2px solid #8b1a1a;">
+  <span>Cookie tecnici + font Google Fonts &middot; nessun tracciamento. <a href="privacy.html" style="color:#d4a853;text-decoration:underline;">Privacy policy</a></span>
+  <button onclick="document.getElementById('cn').style.display='none';localStorage.setItem('cn','1')" style="background:#8b1a1a;color:#fff;border:none;padding:.45rem 1.1rem;cursor:pointer;font-size:.75rem;font-weight:600;white-space:nowrap;flex-shrink:0;">Ho capito</button>
+</div>
+<script>if(!localStorage.getItem('cn'))document.getElementById('cn').style.display='flex';</script>
 </body>
 </html>
